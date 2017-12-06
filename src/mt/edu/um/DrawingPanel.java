@@ -1,28 +1,27 @@
 package mt.edu.um;
 
+import mt.edu.um.shape.*;
+
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
-import javax.swing.JPanel;
+import javax.swing.*;
 
-public class DrawingPanel extends JPanel implements MouseListener{
+public class DrawingPanel extends JPanel implements MouseListener, MouseMotionListener{
     
-    private ArrayList<Shape> myShapes = new ArrayList<>();
+//    private ArrayList<Shape> myShapes = new ArrayList<>();
+    ShapeSingleton shapeSingleton = ShapeSingleton.getInstance();
     
     public DrawingPanel(){
         addMouseListener(this);
     }
-    
-    public void addShape(Shape s){
-        myShapes.add(s);
-        repaint();
-    }
-    
+
     public void paint(Graphics g){
         super.paint(g);
-        for(int i = 0;i < myShapes.size();i++){
-            myShapes.get(i).paint(g);
+        for(int i = 0;i < shapeSingleton.getAllShapes().size();i++){
+            shapeSingleton.getAllShapes().get(i).paint(g);
         }
     }
 
@@ -33,12 +32,20 @@ public class DrawingPanel extends JPanel implements MouseListener{
     
     @Override
     public void mousePressed(MouseEvent e) {
-        if(e.getButton() == 1){
-            // Draw a circle
-            myShapes.add(new Circle(e.getX(),e.getY()));
+        if (shapeSingleton.getCurrentShape() != null){
+            if (shapeSingleton.getCurrentShape() == ShapeSingleton.StrShapeRepresentation.SQUARE) {
+                shapeSingleton.addShape(new Square(e.getX(), e.getY()));
+            }else if (shapeSingleton.getCurrentShape() == ShapeSingleton.StrShapeRepresentation.RECTANGLE) {
+                shapeSingleton.addShape(new Rectangle(e.getX(), e.getY()));
+            }else if (shapeSingleton.getCurrentShape() == ShapeSingleton.StrShapeRepresentation.CIRCLE) {
+                shapeSingleton.addShape(new Circle(e.getX(), e.getY()));
+            }else if (shapeSingleton.getCurrentShape() == ShapeSingleton.StrShapeRepresentation.TRIANGLE) {
+                shapeSingleton.addShape(new Triangle(e.getX(), e.getY()));
+            }
+
         }else{
-            // Draw a rectangle
-            myShapes.add(new Rectangle(e.getX(),e.getY()));
+            JFrame dialog = new JFrame();
+            JOptionPane.showMessageDialog(dialog, "Please, select shape!");
         }
         repaint();
     }
@@ -56,5 +63,15 @@ public class DrawingPanel extends JPanel implements MouseListener{
     @Override
     public void mouseExited(MouseEvent e) {
         
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+
     }
 }

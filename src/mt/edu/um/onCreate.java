@@ -1,11 +1,15 @@
 package mt.edu.um;
 
+import mt.edu.um.shape.ShapeSingleton;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class OnCreate extends JFrame {
+
+    ShapeSingleton shapeSingleton = ShapeSingleton.getInstance();
 
     public static void main(String[] args) {
         OnCreate m = new OnCreate();
@@ -47,21 +51,45 @@ public class OnCreate extends JFrame {
         squareButton.setPreferredSize(dimension);
         squareButton.setMinimumSize(dimension);
         squareButton.setMaximumSize(dimension);
+        squareButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                shapeSingleton.setCurrentShape(ShapeSingleton.StrShapeRepresentation.SQUARE);
+            }
+        });
 
         JButton rectangleButton = new JButton("RECTANGLE");
         rectangleButton.setPreferredSize(dimension);
         rectangleButton.setMinimumSize(dimension);
         rectangleButton.setMaximumSize(dimension);
+        rectangleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                shapeSingleton.setCurrentShape(ShapeSingleton.StrShapeRepresentation.RECTANGLE);
+            }
+        });
 
         JButton circleButton = new JButton("CIRCLE");
         circleButton.setPreferredSize(dimension);
         circleButton.setMinimumSize(dimension);
         circleButton.setMaximumSize(dimension);
+        circleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                shapeSingleton.setCurrentShape(ShapeSingleton.StrShapeRepresentation.CIRCLE);
+            }
+        });
 
         JButton triangleButton = new JButton("TRIANGLE");
         triangleButton.setPreferredSize(dimension);
         triangleButton.setMinimumSize(dimension);
         triangleButton.setMaximumSize(dimension);
+        triangleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                shapeSingleton.setCurrentShape(ShapeSingleton.StrShapeRepresentation.TRIANGLE);
+            }
+        });
 
         p.add(squareButton);
         p.add(rectangleButton);

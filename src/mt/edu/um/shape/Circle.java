@@ -1,11 +1,11 @@
-package mt.edu.um;
+package mt.edu.um.shape;
 
 import java.awt.Graphics;
 
 public class Circle extends Shape{
 
     public Circle(int xPos, int yPos) {
-        super(xPos, yPos);
+        super(xPos, yPos, 0, 0);
     }
     
     public void paint(Graphics g){
