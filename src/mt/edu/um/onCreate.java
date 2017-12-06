@@ -1,28 +1,28 @@
 package mt.edu.um;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class onCreate extends JFrame {
-
-    private DrawingPanel drawingPanel = new DrawingPanel();
-    private JButton circleButton = new JButton("CIRCLE");
-    private JButton rectangleButton = new JButton("RECTANGLE");
+public class OnCreate extends JFrame {
 
     public static void main(String[] args) {
-        onCreate m = new onCreate();
+        OnCreate m = new OnCreate();
         m.setVisible(true);
     }
 
-    public onCreate() {
+    /**
+     * Initialize UI in main constructor
+     */
+    public OnCreate() {
         setTitle("Shapes");
-        setSize(500, 1000);
+        setSize(1000, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setJMenuBar(createMainMenuBar());
+        setJMenuBar(getMenu());
         setLayout(new BorderLayout());
+
+        DrawingPanel drawingPanel = new DrawingPanel();
         add(drawingPanel,BorderLayout.CENTER);
         add(getPalettePanel(),BorderLayout.WEST);
         
@@ -30,38 +30,85 @@ public class onCreate extends JFrame {
 //        drawingPanel.addShape(new Rectangle(50, 200));
 //        drawingPanel.addShape(new Circle(200, 200));
     }
-    
+
+    /**
+     * Create left side menu
+     * @return JPanel
+     */
     private JPanel getPalettePanel(){
         JPanel p = new JPanel();
         p.setBackground(Color.darkGray);
         p.setLayout(new BoxLayout(p,BoxLayout.Y_AXIS));
-        p.add(circleButton);
+//        p.setLayout(new GridLayout(4,0));
+
+        Dimension dimension = new Dimension(150,30);
+
+        JButton squareButton = new JButton("SQUARE");
+        squareButton.setPreferredSize(dimension);
+        squareButton.setMinimumSize(dimension);
+        squareButton.setMaximumSize(dimension);
+
+        JButton rectangleButton = new JButton("RECTANGLE");
+        rectangleButton.setPreferredSize(dimension);
+        rectangleButton.setMinimumSize(dimension);
+        rectangleButton.setMaximumSize(dimension);
+
+        JButton circleButton = new JButton("CIRCLE");
+        circleButton.setPreferredSize(dimension);
+        circleButton.setMinimumSize(dimension);
+        circleButton.setMaximumSize(dimension);
+
+        JButton triangleButton = new JButton("TRIANGLE");
+        triangleButton.setPreferredSize(dimension);
+        triangleButton.setMinimumSize(dimension);
+        triangleButton.setMaximumSize(dimension);
+
+        p.add(squareButton);
         p.add(rectangleButton);
+        p.add(circleButton);
+        p.add(triangleButton);
+
         return p;
     }
 
 
-    protected JMenuBar createMainMenuBar() {
+    /**
+     * Create buttons and their functionalities for JMenuBar
+     * @return JMenuBar
+     */
+    private JMenuBar getMenu() {
         JMenuBar menuBar = new JMenuBar();
 
-        JButton buttonNewGame= new JButton("New Game");
-        buttonNewGame.setOpaque(true);
-        buttonNewGame.setContentAreaFilled(false);
-        buttonNewGame.setBorderPainted(false);
-        buttonNewGame.setFocusable(false);
-        buttonNewGame.addActionListener(new ActionListener() {
+        JButton buttonNew = new JButton("New");
+        buttonNew.setOpaque(true);
+        buttonNew.setContentAreaFilled(false);
+        buttonNew.setBorderPainted(false);
+        buttonNew.setFocusable(false);
+        buttonNew.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 //TODO: write code here
             }
         });
 
-        JButton buttonLoad= new JButton("Load Game");
-        buttonLoad.setOpaque(true);
-        buttonLoad.setContentAreaFilled(false);
-        buttonLoad.setBorderPainted(false);
-        buttonLoad.setFocusable(false);
-        buttonLoad.addActionListener(new ActionListener() {
+        JButton buttonSave = new JButton("Save");
+        buttonSave.setOpaque(true);
+        buttonSave.setContentAreaFilled(false);
+        buttonSave.setBorderPainted(false);
+        buttonSave.setFocusable(false);
+        buttonSave.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                //TODO: write code here
+            }
+        });
+
+        JButton buttonOpen = new JButton("Open");
+        buttonOpen.setOpaque(true);
+        buttonOpen.setContentAreaFilled(false);
+        buttonOpen.setBorderPainted(false);
+        buttonOpen.setFocusable(false);
+        buttonOpen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
                 //TODO: write code here
@@ -69,8 +116,9 @@ public class onCreate extends JFrame {
         });
 
 
-        menuBar.add(buttonNewGame);
-        menuBar.add(buttonLoad);
+        menuBar.add(buttonNew);
+        menuBar.add(buttonOpen);
+        menuBar.add(buttonSave);
         return menuBar;
     }
 
