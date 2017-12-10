@@ -3,10 +3,7 @@ package mt.edu.um;
 import mt.edu.um.shape.Shape;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -51,9 +48,9 @@ public class ShapeSingleton {
     }
 
     /**
-     * TODO
-     * @param jFrame
-     * @return
+     * Serialize shape objects into a file
+     * @param jFrame parent frame for file system dialog
+     * @return true, if operation succeed
      */
     public boolean serializeAllShapes(JFrame jFrame){
         final JFileChooser fc = new JFileChooser("");
@@ -82,16 +79,39 @@ public class ShapeSingleton {
     }
 
     /**
-     * TODO:
-     * @param jFrame
-     * @return
+     * Deserialize shape objects from a file
+     * @param jFrame parent frame for file system dialog
+     * @return true, if operation succeed
      */
     public boolean deserializeAllShapes(JFrame jFrame){
 
         final JFileChooser fc = new JFileChooser("");
         int returnVal = fc.showOpenDialog(jFrame);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            //TODO:
+            File file = fc.getSelectedFile();
+            this.allDrawnShapes = new ArrayList<>();
+            try {
+                FileInputStream fileIn = new FileInputStream(file);
+                ObjectInputStream in = new ObjectInputStream(fileIn);
+
+                try {
+                    while (true) {
+                        allDrawnShapes.add((Shape) in.readObject());
+                    }
+                }catch(EOFException e){
+                    //EOF of file
+                }
+
+                in.close();
+                fileIn.close();
+
+                System.out.println("Loaded from path: " + file.getAbsoluteFile().toString());
+            } catch (IOException i) {
+                i.printStackTrace();
+            } catch (ClassNotFoundException c) {
+                c.printStackTrace();
+            }
+
         } else {
             System.out.println("Open command cancelled by user.");
         }

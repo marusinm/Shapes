@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f93b20d9-d5a4-4519-99b8-c8ad9ad8560d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mt/edu/um/Application.java" afterPath="$PROJECT_DIR$/src/mt/edu/um/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mt/edu/um/DrawingCanvas.java" afterPath="$PROJECT_DIR$/src/mt/edu/um/DrawingCanvas.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mt/edu/um/ShapeSingleton.java" afterPath="$PROJECT_DIR$/src/mt/edu/um/ShapeSingleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mt/edu/um/shape/Shape.java" afterPath="$PROJECT_DIR$/src/mt/edu/um/shape/Shape.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +24,8 @@
       <file leaf-file-name="DrawingCanvas.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mt/edu/um/DrawingCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="168">
+              <caret line="49" column="18" lean-forward="true" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,12 +36,12 @@
       <file leaf-file-name="ShapeSingleton.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mt/edu/um/ShapeSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="90" column="50" lean-forward="false" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
+            <state relative-caret-position="396">
+              <caret line="107" column="93" lean-forward="false" selection-start-line="107" selection-start-column="93" selection-end-line="107" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1128#1129#0" expanded="true" />
-                <element signature="e#1169#1170#0" expanded="true" />
+                <element signature="e#1029#1030#0" expanded="true" />
+                <element signature="e#1070#1071#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,12 +50,12 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mt/edu/um/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="138" column="16" lean-forward="false" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+            <state relative-caret-position="381">
+              <caret line="152" column="64" lean-forward="true" selection-start-line="152" selection-start-column="64" selection-end-line="152" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4676#4677#0" expanded="true" />
-                <element signature="e#4759#4760#0" expanded="true" />
+                <element signature="e#4672#4673#0" expanded="true" />
+                <element signature="e#4755#4756#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,6 +84,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Dra</find>
+      <find>DrawingCanvas</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -102,14 +109,14 @@
         <option value="$PROJECT_DIR$/src/mt/edu/um/OnCreate.java" />
         <option value="$PROJECT_DIR$/src/mt/edu/um/shape/ShapeSingleton.java" />
         <option value="$PROJECT_DIR$/src/mt/edu/um/DrawingPanel.java" />
-        <option value="$PROJECT_DIR$/src/mt/edu/um/DrawingCanvas.java" />
         <option value="$PROJECT_DIR$/src/mt/edu/um/shape/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/mt/edu/um/shape/Circle.java" />
         <option value="$PROJECT_DIR$/src/mt/edu/um/shape/Triangle.java" />
         <option value="$PROJECT_DIR$/src/mt/edu/um/shape/Square.java" />
         <option value="$PROJECT_DIR$/src/mt/edu/um/shape/Shape.java" />
-        <option value="$PROJECT_DIR$/src/mt/edu/um/Application.java" />
+        <option value="$PROJECT_DIR$/src/mt/edu/um/DrawingCanvas.java" />
         <option value="$PROJECT_DIR$/src/mt/edu/um/ShapeSingleton.java" />
+        <option value="$PROJECT_DIR$/src/mt/edu/um/Application.java" />
       </list>
     </option>
   </component>
@@ -461,7 +468,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -512,16 +519,16 @@
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="false" />
-            <element signature="e#1045#1046#0" expanded="false" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1169#1170#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1251#1252#0" expanded="true" />
-            <element signature="e#3388#3389#0" expanded="false" />
-            <element signature="e#3436#3437#0" expanded="false" />
-            <element signature="e#3490#3491#0" expanded="false" />
-            <element signature="e#3530#3531#0" expanded="false" />
+            <element signature="e#915#916#0" expanded="false" />
+            <element signature="e#946#947#0" expanded="false" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#3677#3678#0" expanded="false" />
+            <element signature="e#3725#3726#0" expanded="false" />
+            <element signature="e#3779#3780#0" expanded="false" />
+            <element signature="e#3819#3820#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -598,16 +605,16 @@
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="false" />
-            <element signature="e#1045#1046#0" expanded="false" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1169#1170#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1251#1252#0" expanded="true" />
-            <element signature="e#3388#3389#0" expanded="false" />
-            <element signature="e#3436#3437#0" expanded="false" />
-            <element signature="e#3490#3491#0" expanded="false" />
-            <element signature="e#3530#3531#0" expanded="false" />
+            <element signature="e#915#916#0" expanded="false" />
+            <element signature="e#946#947#0" expanded="false" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#3677#3678#0" expanded="false" />
+            <element signature="e#3725#3726#0" expanded="false" />
+            <element signature="e#3779#3780#0" expanded="false" />
+            <element signature="e#3819#3820#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -744,16 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mt/edu/um/DrawingCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mt/edu/um/shape/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -766,26 +763,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mt/edu/um/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/mt/edu/um/DrawingCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="138" column="16" lean-forward="false" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+          <caret line="49" column="18" lean-forward="true" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4676#4677#0" expanded="true" />
-            <element signature="e#4759#4760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mt/edu/um/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="152" column="64" lean-forward="true" selection-start-line="152" selection-start-column="64" selection-end-line="152" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4672#4673#0" expanded="true" />
+            <element signature="e#4755#4756#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mt/edu/um/ShapeSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="90" column="50" lean-forward="false" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
+        <state relative-caret-position="396">
+          <caret line="107" column="93" lean-forward="false" selection-start-line="107" selection-start-column="93" selection-end-line="107" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
           </folding>
         </state>
       </provider>

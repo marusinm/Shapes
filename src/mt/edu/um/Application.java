@@ -8,6 +8,7 @@ import javax.swing.*;
 public class Application extends JFrame {
 
     ShapeSingleton shapeSingleton = ShapeSingleton.getInstance();
+    DrawingCanvas drawingPanel = new DrawingCanvas();
 
     public static void main(String[] args) {
         Application m = new Application();
@@ -24,7 +25,6 @@ public class Application extends JFrame {
         setJMenuBar(getMenu());
         setLayout(new BorderLayout());
 
-        DrawingCanvas drawingPanel = new DrawingCanvas();
         add(drawingPanel,BorderLayout.CENTER);
         add(getPalettePanel(),BorderLayout.WEST);
         
@@ -148,7 +148,9 @@ public class Application extends JFrame {
         buttonOpen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                //TODO: write code here
+                shapeSingleton.deserializeAllShapes(Application.this);
+                drawingPanel.repaint();
+                JOptionPane.showMessageDialog(Application.this, "Game will be loaded!");
             }
         });
 
