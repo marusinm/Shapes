@@ -1,32 +1,30 @@
 package mt.edu.um;
 
-import mt.edu.um.shape.ShapeSingleton;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class OnCreate extends JFrame {
+public class Application extends JFrame {
 
     ShapeSingleton shapeSingleton = ShapeSingleton.getInstance();
 
     public static void main(String[] args) {
-        OnCreate m = new OnCreate();
+        Application m = new Application();
         m.setVisible(true);
     }
 
     /**
      * Initialize UI in main constructor
      */
-    public OnCreate() {
+    public Application() {
         setTitle("Shapes");
         setSize(1000, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setJMenuBar(getMenu());
         setLayout(new BorderLayout());
 
-        DrawingPanel drawingPanel = new DrawingPanel();
+        DrawingCanvas drawingPanel = new DrawingCanvas();
         add(drawingPanel,BorderLayout.CENTER);
         add(getPalettePanel(),BorderLayout.WEST);
         
@@ -88,6 +86,17 @@ public class OnCreate extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 shapeSingleton.setCurrentShape(ShapeSingleton.StrShapeRepresentation.TRIANGLE);
+            }
+        });
+
+        JButton clearButton = new JButton("Clear");
+        clearButton.setPreferredSize(dimension);
+        clearButton.setMinimumSize(dimension);
+        clearButton.setMaximumSize(dimension);
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO: clear button function
             }
         });
 

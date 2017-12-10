@@ -3,6 +3,8 @@ package mt.edu.um.shape;
 import javax.swing.JPanel;
 
 public class Shape extends JPanel{
+
+    //TODO: add shape side lengths to shape
     
     protected int xPos;
     protected int yPos;

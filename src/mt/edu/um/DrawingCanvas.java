@@ -6,15 +6,13 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.util.ArrayList;
 import javax.swing.*;
 
-public class DrawingPanel extends JPanel implements MouseListener, MouseMotionListener{
-    
-//    private ArrayList<Shape> myShapes = new ArrayList<>();
+public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionListener{
+
     ShapeSingleton shapeSingleton = ShapeSingleton.getInstance();
     
-    public DrawingPanel(){
+    public DrawingCanvas(){
         addMouseListener(this);
     }
 
@@ -45,7 +43,7 @@ public class DrawingPanel extends JPanel implements MouseListener, MouseMotionLi
 
         }else{
             JFrame dialog = new JFrame();
-            JOptionPane.showMessageDialog(dialog, "Please, select shape!");
+            JOptionPane.showMessageDialog(dialog, "Select shape!");
         }
         repaint();
     }
