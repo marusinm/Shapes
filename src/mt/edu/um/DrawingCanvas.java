@@ -27,6 +27,24 @@ public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionL
     }
 
 
+    /**
+     * TODO
+     * @param x
+     * @param y
+     * @return
+     */
+    public Shape isInsideShape(int x, int y){
+        for (Shape shape : shapeSingleton.getAllShapes()){
+            int startX = shape.getX();
+            int startY = shape.getY();
+
+            if (x > shape.getX()
+                    && y > shape.getY()
+                    && x < Math.abs(shape.getX()+shape.getHeight()));
+        }
+
+        return null;
+    }
 
     @Override
     public void mouseClicked(MouseEvent e) {

@@ -1,5 +1,7 @@
 package mt.edu.um.shape;
 
+import mt.edu.um.ShapeSingleton;
+
 import java.awt.Graphics;
 
 /**
@@ -13,7 +15,7 @@ public class Circle extends Shape{
      * @param yPos user canvas y coordinate selection
      */
     public Circle(int xPos, int yPos) {
-        super(xPos, yPos, 0, 0);
+        super(xPos, yPos, 0, 0, ShapeSingleton.StrShapeRepresentation.CIRCLE);
 
         int width = (int )(Math.random() * 90 + 30); //get random length between 30 and 90
         int height = width;
@@ -28,8 +30,9 @@ public class Circle extends Shape{
      */
     public void paint(Graphics g){
         super.paint(g);
+//        g.setColor(getShapeColor()); //outline of shape has the same colour now as whole object
         g.drawArc(xPos, yPos,getShapeWidth(), getShapeHeight(),0,360);
-        g.setColor(getRandomColor());
+        g.setColor(getShapeColor());
         g.fillArc(xPos, yPos,getShapeWidth(), getShapeHeight(),0,360);
     }
 }

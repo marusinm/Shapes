@@ -1,5 +1,7 @@
 package mt.edu.um.shape;
 
+import mt.edu.um.ShapeSingleton;
+
 import javax.swing.JPanel;
 import java.awt.*;
 import java.io.Serializable;
@@ -17,18 +19,21 @@ public class Shape extends JPanel implements Serializable{
     protected int shapeHeight;
     protected int shapeWidth;
     Color randomColor;
+    ShapeSingleton.StrShapeRepresentation shape;
 
-    public Shape(int xPos, int yPos, int numOfSides, int numOfDifferentLengthSides) {
+    public Shape(int xPos, int yPos, int numOfSides, int numOfDifferentLengthSides, ShapeSingleton.StrShapeRepresentation shape) {
         this.xPos = xPos;
         this.yPos = yPos;
         this.numOfSides = numOfSides;
         this.numOfDifferentLengthSides = numOfDifferentLengthSides;
+        this.shape = shape;
 
         Random rand = new Random();
         float r = rand.nextFloat();
         float g = rand.nextFloat();
         float b = rand.nextFloat();
         randomColor = new Color(r, g, b);
+
     }
 
     //standard getters and setters
@@ -80,7 +85,7 @@ public class Shape extends JPanel implements Serializable{
         this.shapeWidth = shapeWidth;
     }
 
-    public Color getRandomColor() {
+    public Color getShapeColor() {
         return randomColor;
     }
 

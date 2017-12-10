@@ -1,5 +1,7 @@
 package mt.edu.um.shape;
 
+import mt.edu.um.ShapeSingleton;
+
 import java.awt.Graphics;
 
 /**
@@ -13,7 +15,7 @@ public class Triangle extends Shape{
      * @param yPos user canvas y coordinate selection
      */
     public Triangle(int xPos, int yPos) {
-        super(xPos, yPos, 3, 3);
+        super(xPos, yPos, 3, 3, ShapeSingleton.StrShapeRepresentation.TRIANGLE);
 
         int width = (int )(Math.random() * 90 + 30); //get random length between 30 and 90
         int height = width;
@@ -28,10 +30,11 @@ public class Triangle extends Shape{
      */
     public void paint(Graphics g){
         super.paint(g);
+//        g.setColor(getShapeColor()); //outline of shape has the same colour now as whole object
         g.drawPolygon(new int[]{xPos, xPos + getShapeWidth(), xPos - getShapeWidth()},
                 new int[]{yPos, yPos + getShapeHeight(), yPos + getShapeHeight()},
                 3);
-        g.setColor(getRandomColor());
+        g.setColor(getShapeColor());
         g.fillPolygon(new int[]{xPos, xPos + getShapeWidth(), xPos - getShapeWidth()},
                 new int[]{yPos, yPos + getShapeHeight(), yPos + getShapeHeight()},
                 3);
