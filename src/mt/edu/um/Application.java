@@ -136,7 +136,7 @@ public class Application extends JFrame {
         buttonSave.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                //TODO: write code here
+                shapeSingleton.serializeAllShapes(Application.this);
             }
         });
 
@@ -156,6 +156,7 @@ public class Application extends JFrame {
         menuBar.add(buttonNew);
         menuBar.add(buttonOpen);
         menuBar.add(buttonSave);
+
         return menuBar;
     }
 

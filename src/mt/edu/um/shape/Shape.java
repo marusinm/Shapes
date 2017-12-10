@@ -1,8 +1,12 @@
 package mt.edu.um.shape;
 
 import javax.swing.JPanel;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
-public class Shape extends JPanel{
+public class Shape extends JPanel implements Serializable{
     
     protected int xPos;
     protected int yPos;
@@ -67,12 +71,13 @@ public class Shape extends JPanel{
         this.shapeWidth = shapeWidth;
     }
 
-    //TODO: finish according specification
-    public String findArea(){
-        return null;
-    }
 
-    public String findPerimeter(){
-        return null;
-    }
+//    //TODO: finish according specification
+//    public String findArea(){
+//        return null;
+//    }
+//
+//    public String findPerimeter(){
+//        return null;
+//    }
 }
