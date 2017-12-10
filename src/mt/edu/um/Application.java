@@ -5,6 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+/**
+ * Create GUI, initialize data, declare buttons functions
+ */
 public class Application extends JFrame {
 
     ShapeSingleton shapeSingleton = ShapeSingleton.getInstance();
@@ -96,7 +99,11 @@ public class Application extends JFrame {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //TODO: clear button function
+                int dialogResult = JOptionPane.showConfirmDialog (Application.this, "Would you like to really perform this action?","Warning", JOptionPane.OK_CANCEL_OPTION);
+                if(dialogResult == JOptionPane.YES_OPTION){
+                    shapeSingleton.removeAllShapes();
+                    drawingPanel.repaint();
+                }
             }
         });
 
@@ -104,6 +111,8 @@ public class Application extends JFrame {
         p.add(rectangleButton);
         p.add(circleButton);
         p.add(triangleButton);
+
+        p.add(clearButton);
 
         return p;
     }
@@ -124,7 +133,11 @@ public class Application extends JFrame {
         buttonNew.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                //TODO: write code here
+                int dialogResult = JOptionPane.showConfirmDialog (Application.this, "New canvas will delete current one?","Warning", JOptionPane.OK_CANCEL_OPTION);
+                if(dialogResult == JOptionPane.YES_OPTION){
+                    shapeSingleton.removeAllShapes();
+                    drawingPanel.repaint();
+                }
             }
         });
 

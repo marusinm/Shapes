@@ -2,8 +2,16 @@ package mt.edu.um.shape;
 
 import java.awt.Graphics;
 
+/**
+ * Triangle representation
+ */
 public class Triangle extends Shape{
 
+    /**
+     * call super constructor and create default shape size
+     * @param xPos user canvas x coordinate selection
+     * @param yPos user canvas y coordinate selection
+     */
     public Triangle(int xPos, int yPos) {
         super(xPos, yPos, 3, 3);
 
@@ -14,6 +22,10 @@ public class Triangle extends Shape{
         setShapeHeight(height);
     }
 
+    /**
+     * draw triangle
+     * @param g
+     */
     public void paint(Graphics g){
         super.paint(g);
         g.drawPolygon(new int[]{xPos, xPos + getShapeWidth(), xPos - getShapeWidth()},

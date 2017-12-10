@@ -13,15 +13,13 @@ public class ShapeSingleton {
 
     private static ShapeSingleton instance;
     private ArrayList<Shape> allDrawnShapes = new ArrayList<>(); //all drawn geometrical objects
+    private StrShapeRepresentation currentShape = null; //represent selected shape
 
     //String shape representation via Enum
     public enum StrShapeRepresentation {
         SQUARE, RECTANGLE, CIRCLE, TRIANGLE
     }
-    private StrShapeRepresentation currentShape = null; //represent selected shape
 
-
-    private ShapeSingleton(){}
 
     //static block initialization for exception handling
     static{
@@ -45,6 +43,13 @@ public class ShapeSingleton {
 
     public ArrayList<Shape> getAllShapes(){
         return allDrawnShapes;
+    }
+
+    /**
+     * reinitialization/clear list of all drawn shapes
+     */
+    public void removeAllShapes(){
+        this.allDrawnShapes = new ArrayList<>();
     }
 
     /**

@@ -1,11 +1,11 @@
 package mt.edu.um.shape;
 
 import javax.swing.JPanel;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+/**
+ * Parent class for all geometric objects
+ */
 public class Shape extends JPanel implements Serializable{
     
     protected int xPos;

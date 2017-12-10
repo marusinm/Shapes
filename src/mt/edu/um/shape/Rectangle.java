@@ -2,8 +2,16 @@ package mt.edu.um.shape;
 
 import java.awt.Graphics;
 
+/**
+ * Rectangle representation
+ */
 public class Rectangle extends Shape{
 
+    /**
+     * call super constructor and create default shape size
+     * @param xPos user canvas x coordinate selection
+     * @param yPos user canvas y coordinate selection
+     */
     public Rectangle(int xPos, int yPos) {
         super(xPos, yPos, 4, 2);
 
@@ -13,7 +21,11 @@ public class Rectangle extends Shape{
         setShapeWidth(width);
         setShapeHeight(height);
     }
-    
+
+    /**
+     * draw rectangle
+     * @param g
+     */
     public void paint(Graphics g){
         super.paint(g);
         g.drawRect(xPos, yPos, getShapeWidth(), getShapeHeight());

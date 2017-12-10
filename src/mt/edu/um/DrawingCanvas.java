@@ -8,6 +8,9 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import javax.swing.*;
 
+/**
+ * Canvas representation, all shapes are drawn here.
+ */
 public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionListener{
 
     ShapeSingleton shapeSingleton = ShapeSingleton.getInstance();
