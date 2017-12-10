@@ -3,13 +3,13 @@ package mt.edu.um.shape;
 import javax.swing.JPanel;
 
 public class Shape extends JPanel{
-
-    //TODO: add shape side lengths to shape
     
     protected int xPos;
     protected int yPos;
     protected int numOfSides;
     protected int numOfDifferentLengthSides;
+    protected int shapeHeight;
+    protected int shapeWidth;
 
     public Shape(int xPos, int yPos, int numOfSides, int numOfDifferentLengthSides) {
         this.xPos = xPos;
@@ -52,6 +52,20 @@ public class Shape extends JPanel{
         this.numOfDifferentLengthSides = numOfDifferentLengthSides;
     }
 
+    protected int getShapeHeight() {
+        return shapeHeight;
+    }
+    protected void setShapeHeight(int shapeHeight) {
+        this.shapeHeight = shapeHeight;
+    }
+
+    public int getShapeWidth() {
+        return shapeWidth;
+    }
+
+    public void setShapeWidth(int shapeWidth) {
+        this.shapeWidth = shapeWidth;
+    }
 
     //TODO: finish according specification
     public String findArea(){
