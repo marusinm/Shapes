@@ -30,10 +30,6 @@ public class Application extends JFrame {
 
         add(drawingPanel,BorderLayout.CENTER);
         add(getPalettePanel(),BorderLayout.WEST);
-        
-//        drawingPanel.addShape(new Rectangle(5, 5));
-//        drawingPanel.addShape(new Rectangle(50, 200));
-//        drawingPanel.addShape(new Circle(200, 200));
     }
 
     /**

@@ -1,7 +1,9 @@
 package mt.edu.um.shape;
 
 import javax.swing.JPanel;
+import java.awt.*;
 import java.io.Serializable;
+import java.util.Random;
 
 /**
  * Parent class for all geometric objects
@@ -14,12 +16,19 @@ public class Shape extends JPanel implements Serializable{
     protected int numOfDifferentLengthSides;
     protected int shapeHeight;
     protected int shapeWidth;
+    Color randomColor;
 
     public Shape(int xPos, int yPos, int numOfSides, int numOfDifferentLengthSides) {
         this.xPos = xPos;
         this.yPos = yPos;
         this.numOfSides = numOfSides;
         this.numOfDifferentLengthSides = numOfDifferentLengthSides;
+
+        Random rand = new Random();
+        float r = rand.nextFloat();
+        float g = rand.nextFloat();
+        float b = rand.nextFloat();
+        randomColor = new Color(r, g, b);
     }
 
     //standard getters and setters
@@ -69,6 +78,10 @@ public class Shape extends JPanel implements Serializable{
 
     public void setShapeWidth(int shapeWidth) {
         this.shapeWidth = shapeWidth;
+    }
+
+    public Color getRandomColor() {
+        return randomColor;
     }
 
 

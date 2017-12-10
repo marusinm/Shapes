@@ -29,5 +29,7 @@ public class Rectangle extends Shape{
     public void paint(Graphics g){
         super.paint(g);
         g.drawRect(xPos, yPos, getShapeWidth(), getShapeHeight());
+        g.setColor(getRandomColor());
+        g.fillRect(xPos, yPos, getShapeWidth(), getShapeHeight());
     }
 }

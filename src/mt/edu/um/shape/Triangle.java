@@ -31,5 +31,9 @@ public class Triangle extends Shape{
         g.drawPolygon(new int[]{xPos, xPos + getShapeWidth(), xPos - getShapeWidth()},
                 new int[]{yPos, yPos + getShapeHeight(), yPos + getShapeHeight()},
                 3);
+        g.setColor(getRandomColor());
+        g.fillPolygon(new int[]{xPos, xPos + getShapeWidth(), xPos - getShapeWidth()},
+                new int[]{yPos, yPos + getShapeHeight(), yPos + getShapeHeight()},
+                3);
     }
 }

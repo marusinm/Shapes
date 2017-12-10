@@ -29,5 +29,7 @@ public class Circle extends Shape{
     public void paint(Graphics g){
         super.paint(g);
         g.drawArc(xPos, yPos,getShapeWidth(), getShapeHeight(),0,360);
+        g.setColor(getRandomColor());
+        g.fillArc(xPos, yPos,getShapeWidth(), getShapeHeight(),0,360);
     }
 }
