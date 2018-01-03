@@ -19,6 +19,7 @@ public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionL
     
     public DrawingCanvas(){
         addMouseListener(this);
+        addMouseMotionListener(this);
     }
 
     public void paint(Graphics g){
@@ -30,10 +31,10 @@ public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionL
 
 
     /**
-     * TODO okomentovat
-     * @param x
-     * @param y
-     * @return
+     * Return shape object from x,y coordinates if there exists any.
+     * @param x mouse click x
+     * @param y mouse click y
+     * @return shape from x,y coordinates null otherwise
      */
     public Shape clickedShape(int x, int y){
         for (int i = shapeSingleton.getAllShapes().size()-1; i >= 0; i--) {
@@ -59,15 +60,6 @@ public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionL
             }
 
             if (awtShape.contains(new Point(x, y))) {//check if mouse is clicked within shape
-//                if (myShape instanceof Square) {
-//                    System.out.println("Clicked a Square");
-//                } else if (myShape instanceof Rectangle) {
-//                    System.out.println("Clicked a Rectangle");
-//                } else if (myShape instanceof Circle) {
-//                    System.out.println("Clicked a Circle");
-//                } else if (myShape instanceof Triangle) {
-//                    System.out.println("Clicked a Triangle");
-//                }
                 return myShape;
             }
         }
@@ -143,14 +135,13 @@ public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionL
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
         System.out.println( "Click at (" + e.getX() + ":" + e.getY() + ")" );
         if (e.getClickCount() == 2) {
             //double click
             doubleClick(e);
             wasDoubleClick = true;
         }else {
-            timer = new Timer(200, new ActionListener() {
+            timer = new Timer(350, new ActionListener() {
                 public void actionPerformed(ActionEvent evt) {
                     if (wasDoubleClick) {
                         wasDoubleClick = false; // reset flag
@@ -186,7 +177,17 @@ public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionL
 
     @Override
     public void mouseDragged(MouseEvent e) {
-
+        Shape myShape = clickedShape(e.getX(), e.getY());
+        if (myShape != null){
+            if (myShape instanceof Triangle){
+                myShape.setxPos(e.getX() - myShape.getShapeWidth()/8);
+                myShape.setyPos(e.getY() - myShape.getShapeHeight()/2);
+            }else{
+                myShape.setxPos(e.getX() - myShape.getShapeWidth()/2);
+                myShape.setyPos(e.getY() - myShape.getShapeHeight()/2);
+            }
+            repaint();
+        }
     }
 
     @Override
