@@ -2,7 +2,7 @@ package mt.edu.um.shape;
 
 import mt.edu.um.ShapeSingleton;
 
-import java.awt.Graphics;
+import java.awt.*;
 
 /**
  * Rectangle representation
@@ -34,5 +34,10 @@ public class Rectangle extends Shape{
         g.drawRect(xPos, yPos, getShapeWidth(), getShapeHeight());
         g.setColor(getShapeColor());
         g.fillRect(xPos, yPos, getShapeWidth(), getShapeHeight());
+
+//        Graphics2D g2 = (Graphics2D) g;
+//        java.awt.Rectangle rectangle = new java.awt.Rectangle(xPos,yPos,getShapeWidth(),getShapeHeight());
+//        g2.setColor(getShapeColor());
+//        g2.fill (rectangle);
     }
 }

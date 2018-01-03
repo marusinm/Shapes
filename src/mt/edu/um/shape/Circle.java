@@ -2,7 +2,8 @@ package mt.edu.um.shape;
 
 import mt.edu.um.ShapeSingleton;
 
-import java.awt.Graphics;
+import java.awt.*;
+import java.awt.geom.Ellipse2D;
 
 /**
  * Circle representation
@@ -34,5 +35,10 @@ public class Circle extends Shape{
         g.drawArc(xPos, yPos,getShapeWidth(), getShapeHeight(),0,360);
         g.setColor(getShapeColor());
         g.fillArc(xPos, yPos,getShapeWidth(), getShapeHeight(),0,360);
+
+//        Graphics2D g2 = (Graphics2D) g;
+//        Ellipse2D.Double circle = new Ellipse2D.Double(xPos, yPos,100, 100);
+//        g2.setColor(getShapeColor());
+//        g2.fill (circle);
     }
 }

@@ -2,7 +2,7 @@ package mt.edu.um.shape;
 
 import mt.edu.um.ShapeSingleton;
 
-import java.awt.Graphics;
+import java.awt.*;
 
 /**
  * Triangle representation
@@ -38,5 +38,12 @@ public class Triangle extends Shape{
         g.fillPolygon(new int[]{xPos, xPos + getShapeWidth(), xPos - getShapeWidth()},
                 new int[]{yPos, yPos + getShapeHeight(), yPos + getShapeHeight()},
                 3);
+
+//        Graphics2D g2 = (Graphics2D) g;
+//        java.awt.Polygon rectangle = new java.awt.Polygon(new int[]{xPos, xPos + getShapeWidth(), xPos - getShapeWidth()},
+//                new int[]{yPos, yPos + getShapeHeight(), yPos + getShapeHeight()},
+//                3);
+//        g2.setColor(getShapeColor());
+//        g2.fill (rectangle);
     }
 }

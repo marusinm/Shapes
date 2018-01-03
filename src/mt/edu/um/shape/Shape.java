@@ -70,10 +70,10 @@ public class Shape extends JPanel implements Serializable{
         this.numOfDifferentLengthSides = numOfDifferentLengthSides;
     }
 
-    protected int getShapeHeight() {
+    public int getShapeHeight() {
         return shapeHeight;
     }
-    protected void setShapeHeight(int shapeHeight) {
+    public void setShapeHeight(int shapeHeight) {
         this.shapeHeight = shapeHeight;
     }
 
@@ -87,6 +87,11 @@ public class Shape extends JPanel implements Serializable{
 
     public Color getShapeColor() {
         return randomColor;
+    }
+
+
+    public ShapeSingleton.StrShapeRepresentation getShape() {
+        return shape;
     }
 
 
