@@ -113,9 +113,7 @@ public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionL
 //                System.out.println("User canceled / closed the dialog, result = " + result);
 //            }
 
-            if (myShape instanceof Square){
-                ((Square) myShape).showCustomDialog(myShape);
-            }
+            myShape.showInformationDialog(myShape);
             repaint(); //in case that user changed shape attributes in custom dialog
         }
     }

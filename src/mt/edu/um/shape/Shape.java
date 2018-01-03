@@ -36,6 +36,14 @@ public class Shape extends JPanel implements Serializable{
 
     }
 
+    /**
+     * implemented in subclasses
+     * @param myShape
+     */
+    public void showInformationDialog(Shape myShape){
+    }
+
+
     //standard getters and setters
 
     public int getxPos() {
