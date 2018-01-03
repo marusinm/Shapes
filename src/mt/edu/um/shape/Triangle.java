@@ -92,12 +92,6 @@ public class Triangle extends Shape{
         label10.setFont(new Font("Arial", Font.BOLD, 15));
         panel.add(label10);
 
-//        JLabel weightLabel = new JLabel("Shape weight");
-//        weightLabel.setFont(new Font("Arial", Font.PLAIN, 15));
-//        panel.add(weightLabel);
-//        JTextField widthField = new JTextField(String.valueOf(myShape.getShapeWidth()));
-//        panel.add(widthField);
-
         JLabel heightLabel = new JLabel("Shape height");
         heightLabel.setFont(new Font("Arial", Font.PLAIN, 15));
         panel.add(heightLabel);

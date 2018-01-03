@@ -74,37 +74,6 @@ public class DrawingCanvas extends JPanel implements MouseListener, MouseMotionL
     public void doubleClick(MouseEvent e){
         Shape myShape = clickedShape(e.getX(), e.getY());
         if (myShape != null){
-
-//            JTextField widthField = new JTextField();
-//            JTextField heightField = new JTextField();
-//            final JComponent[] inputs = new JComponent[] {
-//                    new JLabel("Width"),
-//                    widthField,
-//                    new JLabel("Height"),
-//                    heightField
-//            };
-//            int result = JOptionPane.showConfirmDialog(null, inputs, "Shape info!", JOptionPane.PLAIN_MESSAGE);
-//            if (result == JOptionPane.OK_OPTION) {
-//                System.out.println("resize object to" +
-//                        widthField.getText() + " x " +
-//                        heightField.getText());
-//
-//                try{
-//                    int width = Integer.valueOf(widthField.getText());
-//                    int height = Integer.valueOf(heightField.getText());
-//
-//                    myShape.setShapeWidth(width);
-//                    myShape.setShapeHeight(height);
-//                    repaint();
-//                }catch (Exception ex){
-//                    JFrame dialog = new JFrame();
-//                    JOptionPane.showMessageDialog(dialog, "Shape width and height must be integer numbers!");
-//                }
-//
-//            } else {
-//                System.out.println("User canceled / closed the dialog, result = " + result);
-//            }
-
             myShape.showInformationDialog(myShape);
             repaint(); //in case that user changed shape attributes in custom dialog
         }

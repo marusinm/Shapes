@@ -101,14 +101,4 @@ public class Shape extends JPanel implements Serializable{
     public ShapeSingleton.StrShapeRepresentation getShape() {
         return shape;
     }
-
-
-//    //TODO: finish according specification
-//    public String findArea(){
-//        return null;
-//    }
-//
-//    public String findPerimeter(){
-//        return null;
-//    }
 }
